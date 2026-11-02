@@ -1,0 +1,326 @@
+
+/* Most used styles on the whole page */
+:root {
+  --blue: #0B1D3A;
+  --turquoise: #30D5C8;
+  --hover: #21B2A6;
+  --background: #F4F8F9;
+  --white: #FFFFFF;
+  --text: #1E293B;
+  --muted: #475569;
+  --border: #CBD5E1;
+  --transition: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.header {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition) ease;
+}
+
+.links a:hover,
+.links a:focus {
+  color: var(--hover);
+}
+
+.links a:focus-visible {
+  outline: 2px solid var(--turquoise);
+  outline-offset: 4px;
+}
+
+/* Sections and headings */
+.section {
+  padding: 4rem 0;
+}
+
+h1, h2, h3 {
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  display: inline-block;
+  border-bottom: 3px solid var(--turquoise);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio {
+  max-width: 750px;
+  margin-bottom: 2rem;
+}
+
+.photo {
+  width: 100%;
+  max-width: 480px;
+  padding: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(11, 29, 58, 0.08);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Skills table */
+.table-wrap {
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  box-shadow: 0 4px 10px rgba(11, 29, 58, 0.06);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+tbody tr:hover {
+  background-color: rgba(48, 213, 200, 0.1);
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.project {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform var(--transition) ease,
+    box-shadow var(--transition) ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(11, 29, 58, 0.12);
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+/* Contact form */
+.form {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(11, 29, 58, 0.05);
+  text-align: left;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--turquoise);
+  box-shadow: 0 0 0 3px rgba(48, 213, 200, 0.25);
+}
+
+button {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--turquoise);
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition) ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--hover);
+  color: var(--white);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding: 2.5rem 0;
+  background-color: var(--blue);
+  color: var(--white);
+  border-top: 4px solid var(--turquoise);
+}
+
+.footer p {
+  color: var(--white);
+}
+
+.footer a {
+  color: var(--turquoise);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .table-wrap {
+    text-align: left;
+  }
+}

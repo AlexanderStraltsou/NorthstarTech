@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/alexanderstraltsou"
+             target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+      <div class="container about">
+
+        <div class="bio">
+          <h1>I am Alex, Software Developer and Owner of Northstar Tech</h1>
+
+          <h2>About Me</h2>
+
+          <p>
+            Getting my first stationary PC opened up a whole new world for me.
+            I was endlessly fascinated by taking off the side panel, exploring
+            the components and understanding how each part fit together to make
+            the machine run. Building software and websites gives me that exact
+            same feeling today, assembling complex, working systems out of
+            fundamental parts.
+          </p>
+
+          <p>
+            The turning point came when a friend needed a website for their shop
+            and I decided to try building it myself for the very first time.
+            Diving headfirst into HTML and CSS to build something real
+            transformed web technology from an everyday tool into a hands-on
+            craft I was determined to master.
+          </p>
+
+          <p>
+            One of my goals is to continuously grow Northstar Tech into a
+            solid development company, delivering end-to-end full-stack
+            solutions from an idea to final deployment. I want to
+            achieve this because I enjoy turning ideas into practical,
+            working solutions.
+          </p>
+        </div>
+
+        <div class="photo">
+          <img src="images/workspace.jpeg"
+               alt="My computer and workspace during the development of this project">
+          <p class="caption">My workspace during the creation of this project</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Tech Stack &amp; Skills</h2>
+        <p>Core technologies, skills and proficiency levels.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Technologies &amp; Tools</th>
+                <th scope="col">Proficiency</th>
+                <th scope="col">Applied Project Context</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Backend Development</td>
+                <td>C#, .NET 8, ASP.NET Core, MVC, Entity Framework, REST APIs</td>
+                <td>Intermediate</td>
+                <td>Built scalable web applications, API services, and backend business logic during internships and professional projects.</td>
+              </tr>
+
+              <tr>
+                <td>Frontend &amp; Web</td>
+                <td>HTML5, CSS3, JavaScript, React.js, Blazor, Razor Pages</td>
+                <td>Intermediate</td>
+                <td>Developed interactive web interfaces, single-page applications, and UI/UX solutions.</td>
+              </tr>
+
+              <tr>
+                <td>Databases</td>
+                <td>SQL Server, LINQ, Entity Framework, Azure Cosmos DB</td>
+                <td>Intermediate</td>
+                <td>Designed and managed relational and NoSQL databases for enterprise applications.</td>
+              </tr>
+
+              <tr>
+                <td>Cloud &amp; DevOps</td>
+                <td>Azure DevOps, CI/CD Pipelines, Azure B2C, Git, GitHub</td>
+                <td>Foundational</td>
+                <td>Managed version control, CI/CD workflows, automated build pipelines, and identity authentication.</td>
+              </tr>
+
+              <tr>
+                <td>Mobile &amp; Languages</td>
+                <td>Java, Python, Kotlin, Android Studio, Vue.js, Node.js</td>
+                <td>Foundational</td>
+                <td>Developed native Android mobile apps and academic/university-level programming projects.</td>
+              </tr>
+
+              <tr>
+                <td>Methodologies &amp; Tools</td>
+                <td>Agile / Scrum, Visual Studio, Figma, Swagger, Postman</td>
+                <td>Intermediate</td>
+                <td>Collaborated in agile team environments, conducted sprint demos, created UI designs, and tested API integrations.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Portfolio Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <p>My recent design and development projects:</p>
+
+        <div class="projects">
+
+          <article class="project">
+            <img src="images/portfolio1.png"
+                 alt="Screenshot of my personal portfolio website">
+
+            <div class="content">
+              <h3>Personal Portfolio Website</h3>
+              <p>
+                A portfolio website with a focus on clean design and
+                responsive layout.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="images/portfolio2.png"
+                 alt="Screenshot of my music production catalog website">
+
+            <div class="content">
+              <h3>Music Production Catalog</h3>
+              <p>
+                Contains a complete UI/UX redesign, e-commerce interface
+                and digital brand strategy.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+
+        <form action="mailto:alexander.straltsou@gmail.com"
+              method="post"
+              enctype="text/plain"
+              class="form">
+
+          <div class="field">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name"
+                   required placeholder="Your Name">
+          </div>
+
+          <div class="field">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email"
+                   required placeholder="yourname@example.com">
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject"
+                   required placeholder="Subject">
+          </div>
+
+          <div class="field">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5"
+                      required placeholder="Your message"></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; 2026, Northstar Tech. All Rights Reserved.
+        Contact:
+        <a href="mailto:alexander.straltsou@gmail.com">
+          alexander.straltsou@gmail.com
+        </a>
+      </p>
+
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <span>|</span>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
