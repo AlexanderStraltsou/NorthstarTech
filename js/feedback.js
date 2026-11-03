@@ -236,3 +236,8 @@ feedbackForm.addEventListener("submit", (event) => {
     successTimer = null;
   }, 4000);
 });
+
+clearButton.addEventListener("click", resetForm);
+
+formFields.forEach((input) => input.setAttribute("aria-invalid", "false"));
+updateCharacterCounter();
