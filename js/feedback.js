@@ -112,3 +112,48 @@ function validateWebsite() {
   }
   return markFieldValid(websiteInput);
 }
+
+
+function updateCharacterCounter() {
+  const characterCount = commentsInput.value.length;
+  const enoughCharacters = characterCount >= MIN_COMMENT_LENGTH;
+
+  commentsCount.textContent = `${characterCount} / ${MIN_COMMENT_LENGTH} characters`;
+  commentsCount.classList.toggle("is-enough", enoughCharacters);
+  commentsCount.setAttribute(
+    "aria-label",
+    `${characterCount} characters entered. Minimum ${MIN_COMMENT_LENGTH} characters.`
+  );
+}
+
+
+function validateField(input) {
+  switch (input) {
+    case fullNameInput:
+      return validateFullName();
+    case emailInput:
+      return validateEmail();
+    case topicInput:
+      return validateTopic();
+    case commentsInput:
+      return validateComments();
+    case websiteInput:
+      return validateWebsite();
+    default:
+      return true;
+  }
+}
+
+
+function clearSuccessTimer() {
+  if (successTimer !== null) {
+    window.clearTimeout(successTimer);
+    successTimer = null;
+  }
+}
+
+function clearStatus() {
+  clearSuccessTimer();
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
+}
