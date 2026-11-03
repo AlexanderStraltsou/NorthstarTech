@@ -161,10 +161,10 @@
             <label for="topic">Topic of Interest <span class="required-mark" aria-hidden="true">*</span></label>
             <select id="topic" name="topic" required aria-describedby="topicError">
               <option value="">Choose a topic</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="Technology Stack">Technology Stack</option>
+              <option value="Services">Services</option>
+              <option value="Prices">Prices</option>
+              <option value="Other">Other</option>
             </select>
             <p class="error-message" id="topicError"></p>
           </div>
@@ -174,8 +174,9 @@
             <textarea id="comments" name="comments" rows="5" required
                       aria-describedby="commentsHelp commentsCount commentsError"
                       placeholder="Write at least 15 characters..."></textarea>
-            
-            <p class="error-message" id="commentsError"></p>
+                      <p class="help-text" id="commentsHelp"> Please write at least 15 characters. </p>
+                      <p class="counter" id="commentsCount"> 0 characters </p>
+                      <p class="error-message" id="commentsError"></p>
           </div>
 
           <div class="field">
