@@ -157,3 +157,18 @@ function clearStatus() {
   formStatus.textContent = "";
   formStatus.className = "form-status";
 }
+
+
+function resetForm() {
+  feedbackForm.reset();
+  touchedFields.clear();
+
+  formFields.forEach((input) => {
+    input.classList.remove("is-invalid", "is-valid");
+    input.setAttribute("aria-invalid", "false");
+    document.querySelector(`#${input.id}Error`).textContent = "";
+  });
+
+  updateCharacterCounter();
+  clearStatus();
+}
