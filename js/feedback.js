@@ -172,3 +172,67 @@ function resetForm() {
   updateCharacterCounter();
   clearStatus();
 }
+
+
+formFields.forEach((input) => {
+  input.addEventListener("blur", () => {
+    touchedFields.add(input);
+    validateField(input);
+  });
+
+  input.addEventListener("input", () => {
+    if (input === commentsInput) {
+      updateCharacterCounter();
+    }
+    if (touchedFields.has(input)) {
+      validateField(input);
+    }
+  });
+
+  input.addEventListener("change", () => {
+    if (touchedFields.has(input)) {
+      validateField(input);
+    }
+  });
+});
+
+
+
+feedbackForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  clearStatus();
+
+
+  const validationResults = [
+    validateFullName(),
+    validateEmail(),
+    validateTopic(),
+    validateComments(),
+    validateWebsite()
+  ];
+
+  formFields.forEach((input) => touchedFields.add(input));
+
+  if (validationResults.includes(false)) {
+    const firstInvalidField = feedbackForm.querySelector(".is-invalid");
+    formStatus.textContent = "Please correct the highlighted fields and try again.";
+    formStatus.classList.add("error-summary");
+
+    if (firstInvalidField) {
+      firstInvalidField.focus();
+    }
+    return;
+  }
+
+    const submittedName = fullNameInput.value.trim();
+
+  resetForm();
+  formStatus.textContent = `Thanks for your feedback, ${submittedName}!`;
+  formStatus.classList.add("success");
+
+  successTimer = window.setTimeout(() => {
+    formStatus.textContent = "";
+    formStatus.className = "form-status";
+    successTimer = null;
+  }, 4000);
+});
