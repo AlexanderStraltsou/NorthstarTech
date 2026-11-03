@@ -16,6 +16,7 @@
       <ul class="links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Tech Stack</a></li>
+        <li><a href="#feedback">Newsletter &amp; Feedback</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -137,7 +138,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="feedback" class="section">
       <div class="container">
         <h2>Newsletter &amp; Feedback</h2>
     
@@ -174,8 +175,10 @@
             <textarea id="comments" name="comments" rows="5" required
                       aria-describedby="commentsHelp commentsCount commentsError"
                       placeholder="Write at least 15 characters..."></textarea>
-                      <p class="help-text" id="commentsHelp"> Please write at least 15 characters. </p>
-                      <p class="counter" id="commentsCount"> 0 characters </p>
+                      <div class="comments-meta">
+                          <p class="help-text" id="commentsHelp"> Please write at least 15 characters.</p>
+                          <p class="counter" id="commentsCount">0 characters</p>
+                      </div>
                       <p class="error-message" id="commentsError"></p>
           </div>
 
@@ -254,8 +257,8 @@
           </div>
 
           <div class="field">
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email"
+            <label for="contactEmail">Your Email:</label>
+            <input type="email" id="contactEmail" name="email"
                    required placeholder="yourname@example.com">
           </div>
 
