@@ -302,6 +302,186 @@ button:focus-visible {
   gap: 0.5rem;
 }
 
+
+/* Dropdown styling */
+.form .field select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+}
+
+/* Focus styling for all form fields */
+.form .field input:focus,
+.form .field textarea:focus,
+.form .field select:focus {
+  outline: 3px solid rgba(48, 213, 200, 0.35);
+  outline-offset: 1px;
+  border-color: var(--hover);
+}
+
+/* Required and optional field labels */
+.required-mark {
+  color: #b42318;
+}
+
+.optional-text,
+.help-text,
+.required-note,
+.form-disclaimer {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Invalid field styling */
+.form .field input.is-invalid,
+.form .field textarea.is-invalid,
+.form .field select.is-invalid {
+  border: 2px solid #b42318;
+  background-color: #fff5f4;
+}
+
+/* Valid field styling */
+.form .field input.is-valid,
+.form .field textarea.is-valid,
+.form .field select.is-valid {
+  border: 2px solid #187647;
+}
+
+/* Validation error messages */
+.error-message {
+  margin: 0.35rem 0 0;
+  min-height: 0;
+  color: #b42318;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.error-message:empty {
+  display: none;
+}
+
+/* Comments character counter */
+.comments-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-top: 0.35rem;
+}
+
+.help-text,
+.counter {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.counter {
+  color: #b42318;
+  font-weight: 700;
+}
+
+.counter.is-enough {
+  color: #187647;
+}
+
+/* Form buttons */
+.form-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.form-buttons button {
+  width: auto;
+  flex: 1;
+}
+
+.form-buttons .submit-button {
+  background-color: var(--turquoise);
+  color: var(--blue);
+}
+
+.form-buttons .submit-button:hover {
+  background-color: var(--hover);
+  color: var(--white);
+}
+
+.form-buttons .clear-button {
+  background-color: #e8edf3;
+  color: var(--blue);
+  border: 1px solid var(--border);
+}
+
+.form-buttons .clear-button:hover {
+  background-color: #d8e0e9;
+  color: var(--blue);
+}
+
+/* Submission feedback */
+.form-status {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Successful submission message */
+.form-status.success {
+  padding: 0.85rem 1rem;
+  border: 1px solid #a6e4c0;
+  border-radius: 8px;
+  background: #ecfdf3;
+  color: #187647;
+}
+
+/* Form error summary */
+.form-status.error-summary {
+  color: #b42318;
+}
+
+/* Required field note and disclaimer */
+.required-note,
+.form-disclaimer {
+  margin: 0.65rem 0 0;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.form-disclaimer {
+  font-style: italic;
+}
+
+/* Smaller screens */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .section {
