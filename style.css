@@ -385,7 +385,7 @@ button:focus-visible {
   font-weight: 700;
 }
 
-.counter.is-enough {
+.counter.is-valid-length {
   color: #187647;
 }
 

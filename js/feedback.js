@@ -11,6 +11,8 @@ const clearButton = document.querySelector("#clearButton");
 
 
 const MIN_COMMENT_LENGTH = 15;
+const MAX_COMMENT_LENGTH = 50;
+
 
 const formFields = [
   fullNameInput,
@@ -108,10 +110,17 @@ function validateComments() {
     return showFieldError(commentsInput, "Please enter your comments.");
   }
 
-  if (comments.length < MIN_COMMENT_LENGTH) {
+  if (comments.length < MIN_COMMENT_LENGTH ) {
     return showFieldError(
       commentsInput,
       `Please write at least ${MIN_COMMENT_LENGTH} characters. You currently have ${comments.length}.`
+    );
+  }
+
+  if (comments.length > MAX_COMMENT_LENGTH) {
+    return showFieldError(
+      commentsInput,
+      `Comments cannot exceed ${MAX_COMMENT_LENGTH} characters. You currently have ${comments.length}.`
     );
   }
 
@@ -137,14 +146,15 @@ function validateWebsite() {
 // Update the comments character counter
 function updateCharacterCounter() {
   const characterCount = commentsInput.value.length;
-  const enoughCharacters = commentsInput.value.trim().length >= MIN_COMMENT_LENGTH;
+  const trimmedLength = commentsInput.value.trim().length;
+  const isValidLength = trimmedLength >= MIN_COMMENT_LENGTH && trimmedLength <= MAX_COMMENT_LENGTH;
 
-  commentsCount.textContent = `${characterCount} / ${MIN_COMMENT_LENGTH} characters`;
-  commentsCount.classList.toggle("is-enough", enoughCharacters);
+  commentsCount.textContent = `${characterCount} / ${MAX_COMMENT_LENGTH} characters`;
+  commentsCount.classList.toggle("is-valid-length", isValidLength);
 
   commentsCount.setAttribute(
     "aria-label",
-    `${characterCount} characters entered. Minimum ${MIN_COMMENT_LENGTH} characters.`
+    `${characterCount} characters entered. Required length is between ${MIN_COMMENT_LENGTH} and ${MAX_COMMENT_LENGTH} characters.`
   );
 }
 
